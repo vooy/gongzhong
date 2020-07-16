@@ -11,7 +11,8 @@ class Reply
     function __construct()
     {
         $post_data = file_get_contents("php://input");
-        $xml = simplexml_load_string($post_data);
+        $xml = new SimpleXMLElement($post_data, LIBXML_NOERROR | LIBXML_NOCDATA);
+        //$xml = simplexml_load_string($post_data, 'SimpleXMLElement', LIBXML_NOERROR | LIBXML_NOCDATA);
 
         file_put_contents('./log.txt',print_r([$_REQUEST, $post_data, $xml], true),FILE_APPEND);
     }
