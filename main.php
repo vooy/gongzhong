@@ -1,8 +1,14 @@
 <?php
+namespace main;
+
 define('TOKEN', 'vooy123');
 
-if(checkSignature())
-    echo $_GET['echostr'];
+if(0){
+    if(checkSignature())
+        echo $_GET['echostr'];
+}
+
+$Reply = new Reply();
 
 function checkSignature()
 {
