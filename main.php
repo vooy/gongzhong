@@ -6,8 +6,9 @@ if(0){
     if(checkSignature())
         echo $_GET['echostr'];
 }
-
-$Reply = new Reply();
+if(checkSignature()){
+    $Reply = new Reply();
+}
 
 function checkSignature()
 {

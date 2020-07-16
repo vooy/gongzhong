@@ -10,7 +10,9 @@ class Reply
 {
     function __construct()
     {
-        $postdata = file_get_contents("php://input");
-        file_put_contents('./log.txt',print_r([$_REQUEST, $postdata], true),FILE_APPEND);
+        $post_data = file_get_contents("php://input");
+        $xml = simplexml_load_string($post_data);
+
+        file_put_contents('./log.txt',print_r([$_REQUEST, $post_data, $xml], true),FILE_APPEND);
     }
 }
