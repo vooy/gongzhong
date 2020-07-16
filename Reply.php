@@ -6,9 +6,6 @@
  * Time: 2:44 PM
  */
 
-namespace main;
-
-
 class Reply
 {
     function __construct()

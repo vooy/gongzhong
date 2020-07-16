@@ -1,6 +1,5 @@
 <?php
-namespace main;
-
+include "Reply.php";
 define('TOKEN', 'vooy123');
 
 if(0){
